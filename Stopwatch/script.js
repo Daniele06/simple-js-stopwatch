@@ -68,14 +68,38 @@ resetButton.addEventListener("click", function () {
 // Lap button function
 
 lapButton.addEventListener("click", function () {
+    // Variables for saving laps
+    if (tens <= 9) {
+        valueTens = "0" + tens;
+    } else {
+        valueTens = tens;
+    }
+    
+    if (seconds <= 9) {
+        valueSeconds = "0" + seconds;
+    } else {
+        valueSeconds = seconds;
+    }
+    
+    if (minutes <= 9) {
+        valueMinutes = "0" + minutes;
+    } else {
+        valueMinutes = minutes;
+    }
+    
+    if (hours <= 9) {
+        valueHours = "0" + hours;
+    } else {
+        valueHours = hours;
+    }
+
     // Create a new list element when clicking the lap button
-    lapValue = hours + ":" + minutes + ":" + seconds + ":" + tens;
+    lapValue =  valueHours + ":" + valueMinutes + ":" + valueSeconds + ":" + valueTens;
     var tag = document.createElement("li");
     var text = document.createTextNode(lapValue);
     tag.appendChild(text);
     var element = document.getElementById("lapList");
     element.appendChild(tag);
-
 });
 
 // Start timer function for the start button
