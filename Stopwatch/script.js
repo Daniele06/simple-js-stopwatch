@@ -110,11 +110,13 @@ function startTimer() {
     
     if (tens <= 9) {
         displayTens.innerHTML = "0" + tens;
-    }
-
-    if (tens > 9) {
+    } else {
         displayTens.innerHTML = tens;
     }
+
+    // if (tens > 9) {
+    //     displayTens.innerHTML = tens;
+    // }
 
     if (tens >= 99) {
         seconds++;
@@ -123,11 +125,13 @@ function startTimer() {
 
     if (seconds <= 9) {
         displaySeconds.innerHTML = "0" + seconds;
-    }
-
-    if (seconds > 9) {
+    } else {
         displaySeconds.innerHTML = seconds;
     }
+
+    // if (seconds > 9) {
+    //     displaySeconds.innerHTML = seconds;
+    // }
 
     if (seconds >= 60) {
         seconds = 00;
@@ -136,9 +140,7 @@ function startTimer() {
 
     if (minutes <= 9) {
         displayMinutes.innerHTML = "0" + minutes;
-    }
-
-    if (minutes > 9) {
+    } else {
         displayMinutes.innerHTML = minutes;
     }
 
@@ -149,9 +151,7 @@ function startTimer() {
 
     if (hours <= 9) {
         displayHours.innerHTML = "0" + hours;
-    }
-
-    if (hours > 9) {
+    } else {
         displayHours.innerHTML = hours;
     }
     
